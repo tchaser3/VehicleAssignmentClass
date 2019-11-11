@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF1C606E-409D-455C-8F26-EC41E730CF2F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VehicleAssignmentDLL</RootNamespace>
+    <AssemblyName>VehicleAssignmentDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FindAssignedVehicleByDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAssignedVehicleByDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAssignedVehicleByEmployeeIDAndDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAssignedVehicleByEmployeeIDAndDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAssignedVehicleByVehicleIDAndDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAssignedVehicleByVehicleIDAndDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCurrentAssignedVehicleByVehicleIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCurrentAssignedVehicleByVehicleIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCurrentAssignedVehicleMainByVehicleIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCurrentAssignedVehicleMainByVehicleIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCurrentVehicleAssignmentByEmployeeIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCurrentVehicleAssignmentByEmployeeIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCurrentVehicleAssignmentsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCurrentVehicleAssignmentsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCurrentVehicleMainAssignmentsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCurrentVehicleMainAssignmentsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertVehicleAssignmentEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertVehicleAssignmentEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCurentAssignedVehicleEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateCurentAssignedVehicleEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleAssignmentClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VehicleAssignmentDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VehicleAssignmentDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="FindAssignedVehicleByDateRangeDataSet.xsc">
+      <DependentUpon>FindAssignedVehicleByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssignedVehicleByDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAssignedVehicleByDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAssignedVehicleByDateRangeDataSet.xss">
+      <DependentUpon>FindAssignedVehicleByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssignedVehicleByEmployeeIDAndDateRangeDataSet.xsc">
+      <DependentUpon>FindAssignedVehicleByEmployeeIDAndDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssignedVehicleByEmployeeIDAndDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAssignedVehicleByEmployeeIDAndDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAssignedVehicleByEmployeeIDAndDateRangeDataSet.xss">
+      <DependentUpon>FindAssignedVehicleByEmployeeIDAndDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssignedVehicleByVehicleIDAndDateRangeDataSet.xsc">
+      <DependentUpon>FindAssignedVehicleByVehicleIDAndDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssignedVehicleByVehicleIDAndDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAssignedVehicleByVehicleIDAndDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAssignedVehicleByVehicleIDAndDateRangeDataSet.xss">
+      <DependentUpon>FindAssignedVehicleByVehicleIDAndDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCurrentAssignedVehicleByVehicleIDDataSet.xsc">
+      <DependentUpon>FindCurrentAssignedVehicleByVehicleIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCurrentAssignedVehicleByVehicleIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCurrentAssignedVehicleByVehicleIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCurrentAssignedVehicleByVehicleIDDataSet.xss">
+      <DependentUpon>FindCurrentAssignedVehicleByVehicleIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCurrentAssignedVehicleMainByVehicleIDDataSet.xsc">
+      <DependentUpon>FindCurrentAssignedVehicleMainByVehicleIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCurrentAssignedVehicleMainByVehicleIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCurrentAssignedVehicleMainByVehicleIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCurrentAssignedVehicleMainByVehicleIDDataSet.xss">
+      <DependentUpon>FindCurrentAssignedVehicleMainByVehicleIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCurrentVehicleAssignmentByEmployeeIDDataSet.xsc">
+      <DependentUpon>FindCurrentVehicleAssignmentByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCurrentVehicleAssignmentByEmployeeIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCurrentVehicleAssignmentByEmployeeIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCurrentVehicleAssignmentByEmployeeIDDataSet.xss">
+      <DependentUpon>FindCurrentVehicleAssignmentByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCurrentVehicleAssignmentsDataSet.xsc">
+      <DependentUpon>FindCurrentVehicleAssignmentsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCurrentVehicleAssignmentsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCurrentVehicleAssignmentsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCurrentVehicleAssignmentsDataSet.xss">
+      <DependentUpon>FindCurrentVehicleAssignmentsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCurrentVehicleMainAssignmentsDataSet.xsc">
+      <DependentUpon>FindCurrentVehicleMainAssignmentsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCurrentVehicleMainAssignmentsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCurrentVehicleMainAssignmentsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCurrentVehicleMainAssignmentsDataSet.xss">
+      <DependentUpon>FindCurrentVehicleMainAssignmentsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertVehicleAssignmentEntry.xsc">
+      <DependentUpon>InsertVehicleAssignmentEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertVehicleAssignmentEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertVehicleAssignmentEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertVehicleAssignmentEntry.xss">
+      <DependentUpon>InsertVehicleAssignmentEntry.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UpdateCurentAssignedVehicleEntry.xsc">
+      <DependentUpon>UpdateCurentAssignedVehicleEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateCurentAssignedVehicleEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateCurentAssignedVehicleEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateCurentAssignedVehicleEntry.xss">
+      <DependentUpon>UpdateCurentAssignedVehicleEntry.xsd</DependentUpon>
+    </None>
+    <None Include="VehicleAssignmentDataSet.xsc">
+      <DependentUpon>VehicleAssignmentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VehicleAssignmentDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VehicleAssignmentDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VehicleAssignmentDataSet.xss">
+      <DependentUpon>VehicleAssignmentDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
