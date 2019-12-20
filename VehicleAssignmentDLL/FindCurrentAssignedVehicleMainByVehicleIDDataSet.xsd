@@ -29,6 +29,7 @@
               <Mapping SourceColumn="Assignment" DataSetColumn="Assignment" />
               <Mapping SourceColumn="ManagerID" DataSetColumn="ManagerID" />
               <Mapping SourceColumn="HomeOffice" DataSetColumn="HomeOffice" />
+              <Mapping SourceColumn="EmployeeID" DataSetColumn="EmployeeID" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -40,7 +41,7 @@
   <xs:element name="FindCurrentAssignedVehicleMainByVehicleIDDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="FindCurrentAssignedVehicleMainByVehicleIDDataSet" msprop:Generator_UserDSName="FindCurrentAssignedVehicleMainByVehicleIDDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="FindCurrentAssignedVehicleMainByVehicleID" msprop:Generator_TableClassName="FindCurrentAssignedVehicleMainByVehicleIDDataTable" msprop:Generator_TableVarName="tableFindCurrentAssignedVehicleMainByVehicleID" msprop:Generator_RowChangedName="FindCurrentAssignedVehicleMainByVehicleIDRowChanged" msprop:Generator_TablePropName="FindCurrentAssignedVehicleMainByVehicleID" msprop:Generator_RowDeletingName="FindCurrentAssignedVehicleMainByVehicleIDRowDeleting" msprop:Generator_RowChangingName="FindCurrentAssignedVehicleMainByVehicleIDRowChanging" msprop:Generator_RowEvHandlerName="FindCurrentAssignedVehicleMainByVehicleIDRowChangeEventHandler" msprop:Generator_RowDeletedName="FindCurrentAssignedVehicleMainByVehicleIDRowDeleted" msprop:Generator_RowClassName="FindCurrentAssignedVehicleMainByVehicleIDRow" msprop:Generator_UserTableName="FindCurrentAssignedVehicleMainByVehicleID" msprop:Generator_RowEvArgName="FindCurrentAssignedVehicleMainByVehicleIDRowChangeEvent">
+        <xs:element name="FindCurrentAssignedVehicleMainByVehicleID" msprop:Generator_TableClassName="FindCurrentAssignedVehicleMainByVehicleIDDataTable" msprop:Generator_TableVarName="tableFindCurrentAssignedVehicleMainByVehicleID" msprop:Generator_TablePropName="FindCurrentAssignedVehicleMainByVehicleID" msprop:Generator_RowDeletingName="FindCurrentAssignedVehicleMainByVehicleIDRowDeleting" msprop:Generator_RowChangingName="FindCurrentAssignedVehicleMainByVehicleIDRowChanging" msprop:Generator_RowEvHandlerName="FindCurrentAssignedVehicleMainByVehicleIDRowChangeEventHandler" msprop:Generator_RowDeletedName="FindCurrentAssignedVehicleMainByVehicleIDRowDeleted" msprop:Generator_UserTableName="FindCurrentAssignedVehicleMainByVehicleID" msprop:Generator_RowChangedName="FindCurrentAssignedVehicleMainByVehicleIDRowChanged" msprop:Generator_RowEvArgName="FindCurrentAssignedVehicleMainByVehicleIDRowChangeEvent" msprop:Generator_RowClassName="FindCurrentAssignedVehicleMainByVehicleIDRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TransactionID" msprop:Generator_ColumnVarNameInTable="columnTransactionID" msprop:Generator_ColumnPropNameInRow="TransactionID" msprop:Generator_ColumnPropNameInTable="TransactionIDColumn" msprop:Generator_UserColumnName="TransactionID" type="xs:int" />
@@ -74,6 +75,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="EmployeeID" msprop:Generator_ColumnVarNameInTable="columnEmployeeID" msprop:Generator_ColumnPropNameInRow="EmployeeID" msprop:Generator_ColumnPropNameInTable="EmployeeIDColumn" msprop:Generator_UserColumnName="EmployeeID" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

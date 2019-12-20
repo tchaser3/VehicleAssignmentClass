@@ -293,6 +293,8 @@ namespace VehicleAssignmentDLL {
             
             private global::System.Data.DataColumn columnHomeOffice;
             
+            private global::System.Data.DataColumn columnEmployeeID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public FindCurrentAssignedVehicleMainByVehicleIDDataTable() {
@@ -384,6 +386,14 @@ namespace VehicleAssignmentDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn EmployeeIDColumn {
+                get {
+                    return this.columnEmployeeID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -419,7 +429,7 @@ namespace VehicleAssignmentDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindCurrentAssignedVehicleMainByVehicleIDRow AddFindCurrentAssignedVehicleMainByVehicleIDRow(int TransactionID, string VehicleNumber, string FirstName, string LastName, System.DateTime Assignment, int ManagerID, string HomeOffice) {
+            public FindCurrentAssignedVehicleMainByVehicleIDRow AddFindCurrentAssignedVehicleMainByVehicleIDRow(int TransactionID, string VehicleNumber, string FirstName, string LastName, System.DateTime Assignment, int ManagerID, string HomeOffice, int EmployeeID) {
                 FindCurrentAssignedVehicleMainByVehicleIDRow rowFindCurrentAssignedVehicleMainByVehicleIDRow = ((FindCurrentAssignedVehicleMainByVehicleIDRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TransactionID,
@@ -428,7 +438,8 @@ namespace VehicleAssignmentDLL {
                         LastName,
                         Assignment,
                         ManagerID,
-                        HomeOffice};
+                        HomeOffice,
+                        EmployeeID};
                 rowFindCurrentAssignedVehicleMainByVehicleIDRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFindCurrentAssignedVehicleMainByVehicleIDRow);
                 return rowFindCurrentAssignedVehicleMainByVehicleIDRow;
@@ -465,6 +476,7 @@ namespace VehicleAssignmentDLL {
                 this.columnAssignment = base.Columns["Assignment"];
                 this.columnManagerID = base.Columns["ManagerID"];
                 this.columnHomeOffice = base.Columns["HomeOffice"];
+                this.columnEmployeeID = base.Columns["EmployeeID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -484,6 +496,8 @@ namespace VehicleAssignmentDLL {
                 base.Columns.Add(this.columnManagerID);
                 this.columnHomeOffice = new global::System.Data.DataColumn("HomeOffice", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHomeOffice);
+                this.columnEmployeeID = new global::System.Data.DataColumn("EmployeeID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmployeeID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnTransactionID}, true));
                 this.columnTransactionID.AllowDBNull = false;
@@ -497,6 +511,7 @@ namespace VehicleAssignmentDLL {
                 this.columnAssignment.AllowDBNull = false;
                 this.columnHomeOffice.AllowDBNull = false;
                 this.columnHomeOffice.MaxLength = 2147483647;
+                this.columnEmployeeID.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -722,6 +737,17 @@ namespace VehicleAssignmentDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int EmployeeID {
+                get {
+                    return ((int)(this[this.tableFindCurrentAssignedVehicleMainByVehicleID.EmployeeIDColumn]));
+                }
+                set {
+                    this[this.tableFindCurrentAssignedVehicleMainByVehicleID.EmployeeIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsManagerIDNull() {
                 return this.IsNull(this.tableFindCurrentAssignedVehicleMainByVehicleID.ManagerIDColumn);
             }
@@ -899,6 +925,7 @@ namespace VehicleAssignmentDLL.FindCurrentAssignedVehicleMainByVehicleIDDataSetT
             tableMapping.ColumnMappings.Add("Assignment", "Assignment");
             tableMapping.ColumnMappings.Add("ManagerID", "ManagerID");
             tableMapping.ColumnMappings.Add("HomeOffice", "HomeOffice");
+            tableMapping.ColumnMappings.Add("EmployeeID", "EmployeeID");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
